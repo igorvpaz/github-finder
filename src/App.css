@@ -1,0 +1,71 @@
+
+.Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.Titulo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+/*img logo*/
+h1{
+  font-size: 60px;
+  font-weight: 600;
+}
+/*imagem Github*/
+#search-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+}
+input{
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+}
+#user-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 804px;
+  height: 257px;
+  padding-left: 15px;
+  background-color: #D9D9D9;
+  border-radius: 25px;
+  gap: 20px;
+}
+.card-img-top{
+  width: 220px;
+  height: 220px;
+  border: 2px solid #005CFF;
+  border-radius: 100%;
+}
+#card-right{
+  display: flex;
+  flex-direction: column;
+}
+h2{
+  font-size: 20px;
+  font-weight: 700;
+  color: #005CFF;
+}
+p{
+  font-size: 15px;
+  font-weight: 300;
+  color: #000000;
+}
+.ErrorMessage{
+  font-size: 20px;
+  font-weight: 700;
+  color: #FF0000;
+}
+
+
+
