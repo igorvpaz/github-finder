@@ -33,3 +33,9 @@ git clone https://github.com/seu-usuario/seu-repo.git
 cd seu-repo
 npm install
 npm run dev
+
+## 🔗 Deploy
+
+Confira o projeto online:  
+👉 [https://igorvpaz.github.io/github-finder](https://igorvpaz.github.io/github-finder)
+
