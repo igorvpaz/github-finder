@@ -1,35 +1,38 @@
 
-.Container{
+.Container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.Titulo{
+
+.Titulo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 15px;
 }
-/*img logo*/
-h1{
+
+h1 {
   font-size: 60px;
   font-weight: 600;
 }
-/*imagem Github*/
-#search-bar{
+
+#search-bar {
   display: flex;
   flex-direction: row;
   justify-content: center;
   border-radius: 10px;
 }
-input{
+
+input {
   font-size: 20px;
   font-weight: 600;
   color: #000000;
 }
-#user-card{
+
+#user-card {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -41,31 +44,33 @@ input{
   border-radius: 25px;
   gap: 20px;
 }
-.card-img-top{
+
+.card-img-top {
   width: 220px;
   height: 220px;
   border: 2px solid #005CFF;
   border-radius: 100%;
 }
-#card-right{
+
+#card-right {
   display: flex;
   flex-direction: column;
 }
-h2{
+
+h2 {
   font-size: 20px;
   font-weight: 700;
   color: #005CFF;
 }
-p{
+
+p {
   font-size: 15px;
   font-weight: 300;
   color: #000000;
 }
-.ErrorMessage{
+
+.ErrorMessage {
   font-size: 20px;
   font-weight: 700;
   color: #FF0000;
 }
-
-
-
