@@ -41,63 +41,65 @@ function App() {
 
   return (
     
-    <div className = "Container" >
-      {/* Aqui é o titulo */ }
-      <div className="Titulo">
-        <img src={githubCatLogo} alt="GitHub Cat Logo" />
-        <h1>Perfil</h1>
-        <img src={githubNameLogo} />
-      </div>
+    <div className="Pai">
+      <div className = "Filho" >
+        {/* Aqui é o titulo */ }
+        <div className="Titulo">
+          <img src={githubCatLogo} alt="GitHub Cat Logo" />
+          <h1>Perfil</h1>
+          <img src={githubNameLogo} />
+        </div>
 
-      {/* Aqui é a barra de pesquisa */ }
-      <div className="container mt-5" id='search-bar'>
-        <div className="input-group" style={{ width: '503px', height: '62px' }}>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Digite um usuário do Github"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                buscarUsuario();
+        {/* Aqui é a barra de pesquisa */ }
+        <div className="container mt-5" id='search-bar'>
+          <div className="input-group" style={{ width: '503px', height: '62px' }}>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Digite um usuário do Github"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  buscarUsuario();
+                }
               }
-            }
-            }
-          />
-          <button className="btn btn-primary" type="button" onClick={buscarUsuario}>
-            <i className="bi bi-search"></i>
-          </button>
+              }
+            />
+            <button className="btn btn-primary" type="button" onClick={buscarUsuario}>
+              <i className="bi bi-search"></i>
+            </button>
+          </div>
         </div>
-      </div>
 
-      {/*Loading */ }
-      {loading && (
-      <div className="d-flex justify-content-center mt-5">
-        <div className="spinner-border text-primary" role="status">
-          <span className="visually-hidden">Carregando...</span>
-        </div>
-      </div>
-    )}
-
-      {/* Card com os dados do GitHub */}
-      {userData && (
-        <div className="card mt-5"  id='user-card'>
-          <img src={userData.avatar_url} className="card-img-top" style={{ width: '220px', height: '220pxpx' }} alt="Avatar" />
-          <div className="card-body" id='card-right'>
-            <h2>{userData.login}</h2>
-            <p className="card-text">{userData.bio || 'Não possui bio.'}</p>
+        {/*Loading */ }
+        {loading && (
+        <div className="d-flex justify-content-center mt-5">
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Carregando...</span>
           </div>
         </div>
       )}
 
-      {/* Card de erro */}
-      {erro && (
-        <div className="card mt-5" id="error-card" style={{ width: '710px', padding: '20px', textAlign: 'center', backgroundColor: '#D9D9D9;' }}>
-          <p className="ErrorMessage">Nenhum perfil foi encontrado com esse nome de usuário.<br/>Tente novamente</p>
-        </div>
-      )}
+        {/* Card com os dados do GitHub */}
+        {userData && (
+          <div className="card mt-5"  id='user-card'>
+            <img src={userData.avatar_url} className="card-img-top" style={{ width: '220px', height: '220pxpx' }} alt="Avatar" />
+            <div className="card-body" id='card-right'>
+              <h2>{userData.login}</h2>
+              <p className="card-text">{userData.bio || 'Não possui bio.'}</p>
+            </div>
+          </div>
+        )}
 
+        {/* Card de erro */}
+        {erro && (
+          <div className="card mt-5" id="error-card" style={{ width: '710px', padding: '20px', textAlign: 'center', backgroundColor: '#D9D9D9;' }}>
+            <p className="ErrorMessage">Nenhum perfil foi encontrado com esse nome de usuário.<br/>Tente novamente</p>
+          </div>
+        )}
+
+      </div>
     </div>
   );
 }
